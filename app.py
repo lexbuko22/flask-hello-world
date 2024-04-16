@@ -1,3 +1,9 @@
+'''
+This is a Flask application that demonstrates basic operations on a PostgreSQL database hosted on Render and was used as an assignment
+in CSPB 3308 at CU Boulder Spring 2024.
+'''
+
+
 from flask import Flask
 import psycopg2
 
@@ -5,10 +11,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+    '''
+    This function returns a simple greeting message.
+    '''
     return 'Hello World from Lex in 3308'
 
 @app.route('/db_test')
 def testing():
+    '''
+    This function tests the connection to the PostgreSQL database.
+    '''
     conn = psycopg2.connect("postgres://db_3308_lab_10_database_user:MdjBG8gwLpnfuMJonHc3TFWDZxmfaQBf@dpg-co0tg1gcmk4c73b7os60-a/db_3308_lab_10_database")
     conn.close()
     return "Database Connection Succesful"
@@ -16,6 +28,9 @@ def testing():
 
 @app.route('/db_create')
 def create():
+    '''
+    This function creates a table named 'Basketball' in the PostgreSQL database if it doesn't exist.
+    '''
     conn = psycopg2.connect("postgres://db_3308_lab_10_database_user:MdjBG8gwLpnfuMJonHc3TFWDZxmfaQBf@dpg-co0tg1gcmk4c73b7os60-a/db_3308_lab_10_database")
     cur = conn.cursor()
     cur.execute('''
@@ -34,6 +49,9 @@ def create():
 
 @app.route('/db_insert')
 def inserting():
+    '''
+    This function inserts records into the 'Basketball' table in the PostgreSQL database.
+    '''
     conn = psycopg2.connect("postgres://db_3308_lab_10_database_user:MdjBG8gwLpnfuMJonHc3TFWDZxmfaQBf@dpg-co0tg1gcmk4c73b7os60-a/db_3308_lab_10_database")
     cur = conn.cursor()
     cur.execute(
@@ -53,6 +71,9 @@ def inserting():
 
 @app.route('/db_select')
 def selecting():
+    '''
+    This function retrieves all records from the 'Basketball' table and displays them in an HTML table format.
+    '''
     conn = psycopg2.connect("postgres://db_3308_lab_10_database_user:MdjBG8gwLpnfuMJonHc3TFWDZxmfaQBf@dpg-co0tg1gcmk4c73b7os60-a/db_3308_lab_10_database")
     cur = conn.cursor()
     cur.execute('''
@@ -72,6 +93,9 @@ def selecting():
 
 @app.route('/db_drop')
 def dropping():
+    '''
+    This function drops the 'Basketball' table from the PostgreSQL database.
+    '''
     conn = psycopg2.connect("postgres://db_3308_lab_10_database_user:MdjBG8gwLpnfuMJonHc3TFWDZxmfaQBf@dpg-co0tg1gcmk4c73b7os60-a/db_3308_lab_10_database")
     cur = conn.cursor()
     cur.execute('''
