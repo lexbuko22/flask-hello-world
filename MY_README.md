@@ -4,10 +4,10 @@ This is the [Flask](http://flask.pocoo.org/) [quick start](http://flask.pocoo.or
 
 ## Deployment
 
-Follow the guide at https://render.com/docs/deploy-flask.
 * Follow the [Flask quick start tutorial](http://flask.pocoo.org/docs/1.0/quickstart/#a-minimal-application)
 * Sample project with [Render](https://render.com).
 * Tutorial to [deploy a website](https://render.com/docs/deploy-flask).
+* The tutorial [Render Tutorial](https://github.com/cu-cspb-3308-software-dev-spring-2024/lab-10-lexbuko22/blob/main/Render_tutorial.md) which provides a walkthrough for creating a database and webpage through Render. These resources are used to deploy the Flask application built.
 
 
 # Flask PostgreSQL Example
@@ -40,7 +40,7 @@ This is a simple Flask application that demonstrates basic operations on a Postg
     ```
     Flask --app app.py run
     ```
-2. Access the following routes in your web browser or using an API testing tool like Postman:
+2. Access the following routes in your web browser:
     - `/`: Displays a simple greeting message.
     - `/db_test`: Tests the connection to the PostgreSQL database.
     - `/db_create`: Creates a table named 'Basketball' in the database if it doesn't exist.
@@ -53,3 +53,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 This project is licensed under the MIT License
+
