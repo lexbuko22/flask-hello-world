@@ -23,7 +23,7 @@ This is a simple Flask application that demonstrates basic operations on a Postg
 ## Installation
 1. Clone the repository:
     ```
-    git clone https://github.com/cu-cspb-3308-software-dev-spring-2024/lab-10-lexbuko22.git
+    git clone [https://github.com/cu-cspb-3308-software-dev-spring-2024/lab-10-lexbuko22.git](https://github.com/lexbuko22/flask-hello-world.git)
     ```
 2. Navigate to the project directory:
     ```
